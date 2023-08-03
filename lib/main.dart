@@ -31,11 +31,6 @@ class CounterScreen extends ConsumerWidget {
       child: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          // children: [
-          //   Text(
-          //     'Count: ${value.toString()}',
-          //     style: const TextStyle(fontSize: 24),
-          //   ),
           children:[
             Text(value.toString()),const
           
@@ -47,14 +42,15 @@ class CounterScreen extends ConsumerWidget {
                   onPressed: () {
                     ref.read(stateCounterProvider.notifier).state++;
                   },
-                  child: const Text('Increase'),
+                  child: Icon(Icons.add)
                 ),
                 const SizedBox(width: 20),
                 ElevatedButton(
                   onPressed: () {
                     ref.read(stateCounterProvider.notifier).state--;
                   },
-                  child: const Text('Decrease'),
+                  // child: const Text('Decrease'),
+                  child: Icon(Icons.remove),
                 ),
               ],
             ),
